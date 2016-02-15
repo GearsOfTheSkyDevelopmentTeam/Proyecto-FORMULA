@@ -1,0 +1,324 @@
+fileFormatVersion: 2
+guid: 14a55299c4efc7d448fc8a9f5f54494d
+timeCreated: 1455411559
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: -#1_001
+    100002: -#2_001
+    100004: -#2_002
+    100006: BGP001_001
+    100008: Brawn GP BGP001 Rear Wing_001
+    100010: Brawn GP Front Wing#1_001
+    100012: BRAWN#1_001
+    100014: BRAWN#1_002
+    100016: BRAWN_001
+    100018: //RootNode
+    100020: Cockpit/Nosecone Adjoiner_001
+    100022: Diffuser_001
+    100024: Engine Block#1_001
+    100026: Front Suspension_001
+    100028: Front Suspension_003
+    100030: Gearbox_001
+    100032: GP#1_001
+    100034: GP#2_001
+    100036: GP#2_002
+    100038: irgin#1_001
+    100040: irgin#2_001
+    100042: irgin#2_002
+    100044: Mirror_001
+    100046: Mirror_002
+    100048: Monocoque Complete Merged#1_001
+    100050: Nose Cone Attempt 1_001
+    100052: Object001
+    100054: Pan_001
+    100056: Rear Axle Struts_001
+    100058: Rear Axle Struts_002
+    100060: Rear Axle_001
+    100062: Rear Wing Support#1_001
+    100064: seat_001
+    100066: Side Pod_001
+    100068: Side Pod_003
+    100070: Soft/Supersoft Slick Tyre Mk.II_001
+    100072: Soft/Supersoft Slick Tyre Mk.II_002
+    100074: Soft/Supersoft Slick Tyre Mk.II_003
+    100076: Soft/Supersoft Slick Tyre Mk.II_004
+    100078: Steering Wheel Mk1_001
+    100080: V#2_001
+    100082: V#3_001
+    100084: V#3_002
+    100086: Object002
+    100088: Object003
+    100090: Object004
+    100092: Object005
+    100094: Object006
+    100096: Object007
+    100098: Object008
+    100100: Object009
+    400000: -#1_001
+    400002: -#2_001
+    400004: -#2_002
+    400006: BGP001_001
+    400008: Brawn GP BGP001 Rear Wing_001
+    400010: Brawn GP Front Wing#1_001
+    400012: BRAWN#1_001
+    400014: BRAWN#1_002
+    400016: BRAWN_001
+    400018: //RootNode
+    400020: Cockpit/Nosecone Adjoiner_001
+    400022: Diffuser_001
+    400024: Engine Block#1_001
+    400026: Front Suspension_001
+    400028: Front Suspension_003
+    400030: Gearbox_001
+    400032: GP#1_001
+    400034: GP#2_001
+    400036: GP#2_002
+    400038: irgin#1_001
+    400040: irgin#2_001
+    400042: irgin#2_002
+    400044: Mirror_001
+    400046: Mirror_002
+    400048: Monocoque Complete Merged#1_001
+    400050: Nose Cone Attempt 1_001
+    400052: Object001
+    400054: Pan_001
+    400056: Rear Axle Struts_001
+    400058: Rear Axle Struts_002
+    400060: Rear Axle_001
+    400062: Rear Wing Support#1_001
+    400064: seat_001
+    400066: Side Pod_001
+    400068: Side Pod_003
+    400070: Soft/Supersoft Slick Tyre Mk.II_001
+    400072: Soft/Supersoft Slick Tyre Mk.II_002
+    400074: Soft/Supersoft Slick Tyre Mk.II_003
+    400076: Soft/Supersoft Slick Tyre Mk.II_004
+    400078: Steering Wheel Mk1_001
+    400080: V#2_001
+    400082: V#3_001
+    400084: V#3_002
+    400086: Object002
+    400088: Object003
+    400090: Object004
+    400092: Object005
+    400094: Object006
+    400096: Object007
+    400098: Object008
+    400100: Object009
+    2300000: -#1_001
+    2300002: -#2_001
+    2300004: -#2_002
+    2300006: BGP001_001
+    2300008: Brawn GP BGP001 Rear Wing_001
+    2300010: Brawn GP Front Wing#1_001
+    2300012: BRAWN#1_001
+    2300014: BRAWN#1_002
+    2300016: BRAWN_001
+    2300018: Cockpit/Nosecone Adjoiner_001
+    2300020: Diffuser_001
+    2300022: Engine Block#1_001
+    2300024: Front Suspension_001
+    2300026: Front Suspension_003
+    2300028: Gearbox_001
+    2300030: GP#1_001
+    2300032: GP#2_001
+    2300034: GP#2_002
+    2300036: irgin#1_001
+    2300038: irgin#2_001
+    2300040: irgin#2_002
+    2300042: Mirror_001
+    2300044: Mirror_002
+    2300046: Monocoque Complete Merged#1_001
+    2300048: Nose Cone Attempt 1_001
+    2300050: Object001
+    2300052: Pan_001
+    2300054: Rear Axle Struts_001
+    2300056: Rear Axle Struts_002
+    2300058: Rear Axle_001
+    2300060: Rear Wing Support#1_001
+    2300062: seat_001
+    2300064: Side Pod_001
+    2300066: Side Pod_003
+    2300068: Soft/Supersoft Slick Tyre Mk.II_001
+    2300070: Soft/Supersoft Slick Tyre Mk.II_002
+    2300072: Soft/Supersoft Slick Tyre Mk.II_003
+    2300074: Soft/Supersoft Slick Tyre Mk.II_004
+    2300076: Steering Wheel Mk1_001
+    2300078: V#2_001
+    2300080: V#3_001
+    2300082: V#3_002
+    2300084: Object002
+    2300086: Object003
+    2300088: Object004
+    2300090: Object005
+    2300092: Object006
+    2300094: Object007
+    2300096: Object008
+    2300098: Object009
+    3300000: -#1_001
+    3300002: -#2_001
+    3300004: -#2_002
+    3300006: BGP001_001
+    3300008: Brawn GP BGP001 Rear Wing_001
+    3300010: Brawn GP Front Wing#1_001
+    3300012: BRAWN#1_001
+    3300014: BRAWN#1_002
+    3300016: BRAWN_001
+    3300018: Cockpit/Nosecone Adjoiner_001
+    3300020: Diffuser_001
+    3300022: Engine Block#1_001
+    3300024: Front Suspension_001
+    3300026: Front Suspension_003
+    3300028: Gearbox_001
+    3300030: GP#1_001
+    3300032: GP#2_001
+    3300034: GP#2_002
+    3300036: irgin#1_001
+    3300038: irgin#2_001
+    3300040: irgin#2_002
+    3300042: Mirror_001
+    3300044: Mirror_002
+    3300046: Monocoque Complete Merged#1_001
+    3300048: Nose Cone Attempt 1_001
+    3300050: Object001
+    3300052: Pan_001
+    3300054: Rear Axle Struts_001
+    3300056: Rear Axle Struts_002
+    3300058: Rear Axle_001
+    3300060: Rear Wing Support#1_001
+    3300062: seat_001
+    3300064: Side Pod_001
+    3300066: Side Pod_003
+    3300068: Soft/Supersoft Slick Tyre Mk.II_001
+    3300070: Soft/Supersoft Slick Tyre Mk.II_002
+    3300072: Soft/Supersoft Slick Tyre Mk.II_003
+    3300074: Soft/Supersoft Slick Tyre Mk.II_004
+    3300076: Steering Wheel Mk1_001
+    3300078: V#2_001
+    3300080: V#3_001
+    3300082: V#3_002
+    3300084: Object002
+    3300086: Object003
+    3300088: Object004
+    3300090: Object005
+    3300092: Object006
+    3300094: Object007
+    3300096: Object008
+    3300098: Object009
+    4300000: BGP001_001
+    4300002: Soft/Supersoft Slick Tyre Mk.II_001
+    4300004: Soft/Supersoft Slick Tyre Mk.II_002
+    4300006: Soft/Supersoft Slick Tyre Mk.II_003
+    4300008: Soft/Supersoft Slick Tyre Mk.II_004
+    4300010: Front Suspension_001
+    4300012: Front Suspension_003
+    4300014: irgin#1_001
+    4300016: -#1_001
+    4300018: V#2_001
+    4300020: irgin#2_001
+    4300022: -#2_001
+    4300024: V#3_001
+    4300026: irgin#2_002
+    4300028: -#2_002
+    4300030: V#3_002
+    4300032: Side Pod_001
+    4300034: Brawn GP BGP001 Rear Wing_001
+    4300036: Pan_001
+    4300038: Cockpit/Nosecone Adjoiner_001
+    4300040: Rear Axle Struts_001
+    4300042: Rear Axle Struts_002
+    4300044: Rear Axle_001
+    4300046: Diffuser_001
+    4300048: Monocoque Complete Merged#1_001
+    4300050: BRAWN#1_001
+    4300052: GP#2_001
+    4300054: GP#2_002
+    4300056: BRAWN#1_002
+    4300058: Brawn GP Front Wing#1_001
+    4300060: Nose Cone Attempt 1_001
+    4300062: GP#1_001
+    4300064: BRAWN_001
+    4300066: Side Pod_003
+    4300068: Rear Wing Support#1_001
+    4300070: Mirror_001
+    4300072: Mirror_002
+    4300074: Steering Wheel Mk1_001
+    4300076: seat_001
+    4300078: Engine Block#1_001
+    4300080: Gearbox_001
+    4300082: Object001
+    4300084: Object002
+    4300086: Object003
+    4300088: Object004
+    4300090: Object005
+    4300092: Object006
+    4300094: Object007
+    4300096: Object008
+    4300098: Object009
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
