@@ -7,7 +7,6 @@ public class ControlCamara : MonoBehaviour {
 	public static GameObject Target;
 	public static Vector3 desplazamiento = new Vector3(0,0,0);
 	public static Vector3 posicionInicio = new Vector3(0,0,0);
-	private float yVelocity = 0.0F;
 	public static bool Seleccion = false;
 
 	public float distance = 10f, height = 1.3f, width,izq,dere, heightDamping = 4f;
@@ -23,6 +22,7 @@ public class ControlCamara : MonoBehaviour {
 		izq = (width/3) + width;
 		dere = ((width/3) - width)*-1;
 		Target = GameObject.Find ("Target");
+		posicionInicio = transform.position;
 	}
 	
 
@@ -36,7 +36,7 @@ public class ControlCamara : MonoBehaviour {
 			MovVertical = Mathf.Round(MovVertical);
 
 			if(!Seleccion){
-				posicionInicio = transform.position;
+
 
 				if(MovHorizontal != 0){
 
@@ -87,7 +87,6 @@ public class ControlCamara : MonoBehaviour {
 	void SeleccionTarget ( GameObject target , Vector3 desplazamiento ) {
 
 	    float movV, movH;
-		bool move = true;
 
 		movV = Input.GetAxis ("Vertical");
 		movV = Mathf.Round (movV);
@@ -95,8 +94,13 @@ public class ControlCamara : MonoBehaviour {
 		movH = Mathf.Round (movH);
 
 		if(escape){
+			if(!Conductor.ConductorSeleccion){
 
-			StartCoroutine("PosicionInicial");
+				StartCoroutine("PosicionInicial",posicionInicio);
+			}else{
+
+				StartCoroutine("PosicionInicial",desplazamiento);
+			}
 		}else{
 			distance = -0.1f;
 			currentRotationAngle = transform.eulerAngles.y;
@@ -142,15 +146,16 @@ public class ControlCamara : MonoBehaviour {
 	}
 
 
-	IEnumerator PosicionInicial(){
+	IEnumerator PosicionInicial( Vector3 posicion){
 
-		while(Vector3.Distance(transform.position,posicionInicio) > 0.1f){
+		while(Vector3.Distance(transform.position,posicion) > 0.1f){
 
-			transform.position = Vector3.Lerp (transform.position,posicionInicio, heightDamping * Time.deltaTime);
+			transform.position = Vector3.Lerp (transform.position,posicion, heightDamping * Time.deltaTime);
 			transform.LookAt(Target.transform.position);
 			yield return null;
 		}
 
+		Debug.Log ("entro");
 		Seleccion = false;
 		escape = false;
 	}

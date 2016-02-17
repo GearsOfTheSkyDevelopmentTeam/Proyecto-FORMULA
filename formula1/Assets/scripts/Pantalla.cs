@@ -5,8 +5,7 @@ using System.Collections;
 public class Pantalla : MonoBehaviour {
 	
 	public GameObject AuxButton,AuxButtomZoom,AuxImage;
-
-	public static bool PressZoom = false;
+	public static bool PressZoom = false,PressConductor = false;
 	
 	public static Vector3 AuxLocalDesplazamiento = new Vector3(0,0,0);
 	public static GameObject AuxTargetZoom;
@@ -27,17 +26,35 @@ public class Pantalla : MonoBehaviour {
 		AllTrue ();
 	}
 
+	public static void ConductorPress(){
+
+		ExitPantalla.SetActive(true);
+		ButtomFalse(MenuPantalla);
+		ButtomFalse(ZoomPantalla);
+	}
+
 	public void ExitPress(){
 
-		if (PressZoom) {
+		if (!PressConductor) {
 
-			ControlCamara.escape = true;
-			ControlCamara.Target = GameObject.Find ("Target");
-			PressZoom = false;
-			AllTrue ();
+			if (PressZoom) {
+
+				ControlCamara.escape = true;
+				ControlCamara.Target = GameObject.Find ("Target");
+				PressZoom = false;
+				AllTrue ();
+			} else {
+
+				AllFalse ();
+			}
 		} else {
 
-			AllFalse ();
+			ControlCamara.escape = true;
+			Conductor.ConductorSeleccion = false;
+			ControlCamara.Seleccion = true;
+			ControlCamara.Target = GameObject.Find ("Target");
+			ButtomFalse(ExitPantalla);
+			PressConductor = false;
 		}
 	}
 
@@ -66,7 +83,7 @@ public class Pantalla : MonoBehaviour {
 		ZoomPantalla.SetActive(true);
 	}
 
-	void ButtomFalse( GameObject boton){
+	public static void ButtomFalse( GameObject boton){
 
 		boton.SetActive(false);
 	}
