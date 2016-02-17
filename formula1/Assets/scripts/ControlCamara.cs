@@ -13,7 +13,7 @@ public class ControlCamara : MonoBehaviour {
 	public float distance = 10f, height = 1.3f, width,izq,dere, heightDamping = 4f;
 	private float currentRotationAngle, currentHeight, currentWidth;
 	public Quaternion currentRotation;
-	private bool escape = false;
+	public static bool escape = false;
 
 	[HideInInspector]
 	public float MovHorizontal,MovVertical,OrbitDegrees = 30f,RotaY;

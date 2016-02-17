@@ -15,6 +15,13 @@ public class PartesCarro : MonoBehaviour {
 	void Update () {
 
 		if(ControlCamara.Seleccion) rend.material.SetFloat ("_Outline", 0);
+
+//		if(Pantalla.PressZoom){
+//
+//			ControlCamara.desplazamiento =  LocalDesplazamiento;
+//			ControlCamara.Seleccion = true;
+//			ControlCamara.Target = this.gameObject;	
+//		}
 	}
 
 	void OnMouseEnter() {
@@ -46,9 +53,15 @@ public class PartesCarro : MonoBehaviour {
 
 	void OnMouseDown() {
 
-		ControlCamara.desplazamiento = LocalDesplazamiento;
-		ControlCamara.Seleccion = true;
-		ControlCamara.Target = this.gameObject;
-	}
+		if(!Pantalla.PressZoom){
 
+			Pantalla.AuxLocalDesplazamiento = LocalDesplazamiento;
+			Pantalla.AuxTargetZoom = this.gameObject;
+			Pantalla.PantallaPress ();
+		}
+//		ControlCamara.desplazamiento =  LocalDesplazamiento;
+//		ControlCamara.Seleccion = true;
+//		ControlCamara.Target = this.gameObject;	
+
+	}
 }
