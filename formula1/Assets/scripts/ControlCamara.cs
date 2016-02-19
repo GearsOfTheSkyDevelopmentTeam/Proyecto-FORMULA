@@ -3,8 +3,12 @@ using System.Collections;
 
 public class ControlCamara : MonoBehaviour {
 
+	public const int NoRestringido = 1;
+	public const int Restringido = 2;
+	public int modo;
+
+	public GameObject target;
 	public float smooth = 0.3F,veloRotaY=45;
-	public static GameObject Target;
 	public static Vector3 desplazamiento = new Vector3(0,0,0);
 	public static Vector3 posicionInicio = new Vector3(0,0,0);
 	public static bool Seleccion = false;
@@ -14,150 +18,183 @@ public class ControlCamara : MonoBehaviour {
 	public Quaternion currentRotation;
 	public static bool escape = false;
 
+	Vector3 posicionVieja;
+	public bool clickBlockeado {get; private set;}
+	bool corriendoCorutina = false;
+
+	Restricciones restricciones;
+	static Restricciones movLibre = new Restricciones(Mathf.Infinity);
+
 	[HideInInspector]
-	public float MovHorizontal,MovVertical,OrbitDegrees = 30f,RotaY;
+	float OrbitDegrees = 40f, RotaY;
 
-	void Start () {
+	private static ControlCamara _instance;
 
+	private ControlCamara() {}
+
+	void Start(){
+		clickBlockeado = false;
 		izq = (width/3) + width;
 		dere = ((width/3) - width)*-1;
-		Target = GameObject.Find ("Target");
+		target = GameObject.Find("MainTarget");
 		posicionInicio = transform.position;
+		posicionVieja = posicionInicio;
+		modo = NoRestringido;
 	}
-	
 
-	void Update () {
-
-		if(Target){
-
-			MovHorizontal = Input.GetAxis("Horizontal");
-			MovVertical = Input.GetAxis("Vertical");
-			MovHorizontal = Mathf.Round(MovHorizontal);
-			MovVertical = Mathf.Round(MovVertical);
-
-			if(!Seleccion){
-
-
-				if(MovHorizontal != 0){
-
-					if(Mathf.Sign(MovHorizontal) == -1){
-
-						transform.position = RotatePointAroundPivot(transform.position,Target.transform.position,Quaternion.Euler(0, OrbitDegrees * Time.deltaTime, 0));
-					}else{
-
-						transform.position = RotatePointAroundPivot(transform.position,Target.transform.position,Quaternion.Euler(0, -OrbitDegrees * Time.deltaTime, 0));
-					}
-				}
-
-				if(MovVertical != 0){
-					
-					if(Mathf.Sign(MovVertical) == -1){
-
-						transform.localPosition= new Vector3(transform.localPosition.x,Mathf.Lerp(transform.localPosition.y,0f,Time.deltaTime),transform.localPosition.z);
-					}else{
-
-						transform.localPosition= new Vector3(transform.localPosition.x,Mathf.Lerp(transform.localPosition.y,3f,Time.deltaTime),transform.localPosition.z);
-					}
-				}
-			
-				SmoothLook(Target.transform.position);
-			}else{
-				if(Seleccion){
-					SeleccionTarget ( Target , desplazamiento );
-				}
-				if(Input.GetKey (KeyCode.Escape)){
-
-					escape= true;
-					Target = GameObject.Find("Target");
-				}
-
+	void Update(){
+		if(target){
+			Vector2 input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+			if(!corriendoCorutina){
+				Mover(input, modo == NoRestringido ? movLibre : restricciones);
 			}
+			SmoothLook(target.transform.position);
+		}
+	}
+
+	void LateUpdate(){
+		if(target){
+			
+		}
+	}
+
+	public void Reset(){
+		target = GameObject.Find("MainTarget");
+		modo = NoRestringido;
+		StopCoroutine("MoverHacia");
+		StartCoroutine("MoverHacia", posicionVieja);
+		clickBlockeado = false;
+	}
+
+	public void BlockearCLick(){
+		clickBlockeado = true;
+//		posicionVieja = transform.position;
+	}
+
+	public void DesbloquearClick(){
+		clickBlockeado = false;
+	}
+
+	public void Mover(Vector2 input, Restricciones restricciones){
+		Vector3 newPosition = transform.position;
+
+		if(input.x != 0){
+			float dirX = -Mathf.Sign(input.x);				
+			float rot = dirX * OrbitDegrees * Time.deltaTime;
+			Quaternion rotation = Quaternion.Euler(0, rot, 0);
+			newPosition = RotatePointAroundPivot(newPosition, target.transform.position, rotation);
 		}
 
+		if(input.y != 0){
+			float distanciaY = Mathf.Sign(input.y) < 0 ? 0f : 3f;
+			Vector3 lerpTo = new Vector3(newPosition.x, distanciaY, newPosition.z);
+			newPosition = Vector3.Lerp(newPosition, lerpTo, Time.deltaTime);
+		}
+			
+		newPosition.x = Mathf.Clamp(newPosition.x, restricciones.minX, restricciones.maxX);
+		newPosition.y = Mathf.Clamp(newPosition.y, restricciones.minY, restricciones.maxY);
+		newPosition.z = Mathf.Clamp(newPosition.z, restricciones.minZ, restricciones.maxZ);
+
+		transform.position = newPosition;
 	}
-	
+
+	public void CambiarTarget(GameObject _target, int _modo, Vector3 newPosition, bool doOverride = false){
+		float valX = .5f;
+		if(!clickBlockeado || doOverride){
+			clickBlockeado = true;
+			posicionVieja = transform.position;
+			target = _target;
+			modo = _modo;
+
+			restricciones.minX = newPosition.x - valX;
+			restricciones.maxX = newPosition.x + valX;
+
+			restricciones.minZ = newPosition.z - valX;
+			restricciones.maxZ = newPosition.z + valX;
+
+			restricciones.minY = newPosition.y;
+			restricciones.maxY = newPosition.y + .5f;
+
+			StopCoroutine("MoverHacia");
+			StartCoroutine("MoverHacia", newPosition);
+		}
+	}
+
+	public void CambiarTarget(ParteCarro _parteCarro, bool doOverride = false){
+		CambiarTarget(_parteCarro.gameObject, _parteCarro.ModoCamara, _parteCarro.DesplazamientoLocal, doOverride);
+	}
+
+	IEnumerator MoverHacia( Vector3 posicion){
+		corriendoCorutina = true;
+		while(Vector3.Distance(transform.position, posicion) > .05f){
+			transform.position = Vector3.Lerp(transform.position,posicion, .05f);
+			yield return null;
+		}
+		corriendoCorutina = false;
+	}
+		
 	void SmoothLook(Vector3 newDirection){
-		transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(newDirection-transform.position), Time.deltaTime*veloRotaY);
+		transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(newDirection - transform.position), Time.deltaTime*veloRotaY);
 	}
 
 	public static Vector3 RotatePointAroundPivot(Vector3 point, Vector3 pivot, Quaternion angle) {
 		return angle * ( point - pivot) + pivot;
 	}
 
-	void SeleccionTarget ( GameObject target , Vector3 desplazamiento ) {
-
-	    float movV, movH;
-
-		movV = Input.GetAxis ("Vertical");
-		movV = Mathf.Round (movV);
-		movH = Input.GetAxis ("Horizontal");
-		movH = Mathf.Round (movH);
-
-		if(escape){
-			if(!Conductor.ConductorSeleccion){
-
-				StartCoroutine("PosicionInicial",posicionInicio);
-			}else{
-
-				StartCoroutine("PosicionInicial",desplazamiento);
+	//Singleton
+	public static ControlCamara instance{
+		get{
+			if(_instance == null){
+				_instance = (ControlCamara) FindObjectOfType(typeof(ControlCamara));
 			}
-		}else{
-			distance = -0.1f;
-			currentRotationAngle = transform.eulerAngles.y;
-			currentHeight = transform.position.y;
-			
-			if (Mathf.Sign (movV) == 1) {
-				
-				currentHeight = Mathf.Lerp (currentHeight, height + 0.5f, heightDamping * Time.deltaTime);    
-			} 
-			
-			if(movV == 0){
-				
-				currentHeight = Mathf.Lerp (currentHeight, height, heightDamping * Time.deltaTime);
+			if(_instance == null){
+				_instance = new ControlCamara();
 			}
-			
-			if(movH == 0){
-				
-				currentWidth = Mathf.Lerp (currentWidth, width, heightDamping * Time.deltaTime);
-			}else{
-				
-				if (Mathf.Sign (movH) == -1) {
-					
-					currentWidth = Mathf.Lerp (currentWidth, izq, heightDamping * Time.deltaTime);    
-				}
-				
-				if (Mathf.Sign (movH) == 1) {
-					
-					currentWidth = Mathf.Lerp (currentWidth, dere, heightDamping * Time.deltaTime);
-				}
-			}
-			
-			currentRotation = Quaternion.Euler (0, currentRotationAngle, 0);
-			
-			
-			transform.position = target.transform.position;
-			transform.position -= currentRotation * Vector3.forward * distance;    
-			
-			transform.position = new Vector3(transform.position.x, currentHeight,currentWidth) - desplazamiento;
-			
-			Vector3 targetToLook = new Vector3(target.transform.position.x, target.transform.position.y, transform.position.z);
-			transform.LookAt(targetToLook);
+			return _instance;
+		}
+	}
+	
+	public static float ClampAngle(float angle, float min, float max){
+		if(angle < -360){
+			angle += 360;
+		}
+		if(angle > 360){
+			angle -= 360;
+		}
+		return Mathf.Clamp(angle, min, max);
+	}
+
+	//Struct para guardar informacion de las restricciones
+	public struct Restricciones{
+		public float minX, maxX;
+		public float minY, maxY;
+		public float minZ, maxZ;
+
+		public Restricciones(float val){
+			minX = minY = minZ = -val;
+			maxX = maxY = maxZ = val;
+		}
+
+		public void Cambiar(float _minX, float _maxX, float _minY, float _maxY, float _minZ, float _maxZ){
+			minX = _minX;
+			maxX = _maxX;
+			minY = _minY;
+			maxY = _maxY;
+			minZ = _minZ;
+			maxZ = _maxZ;
 		}
 	}
 
-
-	IEnumerator PosicionInicial( Vector3 posicion){
-
-		while(Vector3.Distance(transform.position,posicion) > 0.1f){
-
-			transform.position = Vector3.Lerp (transform.position,posicion, heightDamping * Time.deltaTime);
-			transform.LookAt(Target.transform.position);
-			yield return null;
+	public void MoverSinRestricciones(Vector2 input){
+		if(input.x != 0){
+			float dirX = -Mathf.Sign(input.x);
+			Quaternion rotation = Quaternion.Euler(0, dirX * OrbitDegrees * Time.deltaTime, 0);
+			transform.position = RotatePointAroundPivot(transform.position, target.transform.position, rotation);
 		}
-
-		Debug.Log ("entro");
-		Seleccion = false;
-		escape = false;
+		if(input.y != 0){
+			float distanciaY = Mathf.Sign(input.y) < 0 ? 0f : 3f;
+			Vector3 lerpTo = new Vector3(transform.position.x, distanciaY, transform.position.z);
+			transform.position = Vector3.Lerp(transform.position, lerpTo, Time.deltaTime);
+		}
 	}
-
 }
