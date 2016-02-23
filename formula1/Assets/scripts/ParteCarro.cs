@@ -15,7 +15,7 @@ public class ParteCarro : MonoBehaviour {
 	public int ModoCamara {get; private set;}
 	public bool esParte {get; private set;}
 
-	Color colorOriginal;
+	public Color colorOriginal;
 	Color targetColor;
 	int colorActual;
 	static List<Color> colores;
@@ -46,8 +46,12 @@ public class ParteCarro : MonoBehaviour {
 	}
 
 	void Update(){
-		if(ControlCamara.instance.clickBlockeado)
+		if(ControlCamara.instance.clickBlockeado){
 			rend.material.SetFloat("_Outline", 0);
+			if(esParte){
+				UIController.instance.UnsetInfoPanelColor();
+			}
+		}
 
 		if(esParte && rendPadre.material.color != targetColor){
 			rendPadre.material.color = Color.Lerp(rendPadre.material.color, targetColor, .2f);
@@ -89,7 +93,7 @@ public class ParteCarro : MonoBehaviour {
 			}
 		}
 
-		colorOriginal = rend.material.color;
+		colorOriginal = rendPadre.material.color;
 		targetColor = colorOriginal;
 		colorActual = colores.Count;
 	}
@@ -104,7 +108,9 @@ public class ParteCarro : MonoBehaviour {
 
 	void OnMouseOver() {
 		if(!ControlCamara.instance.clickBlockeado){
-
+			if(esParte){
+				UIController.instance.SetInfoPanelColor(Color.black, informacion, transform.position);
+			}
 		}
 	}
 
@@ -113,6 +119,9 @@ public class ParteCarro : MonoBehaviour {
 		if(!ControlCamara.instance.clickBlockeado){
 			rend.enabled = false;
 			rend.material.SetFloat ("_Outline", 0);
+			if(esParte){
+				UIController.instance.UnsetInfoPanelColor();
+			}
 		}
 	}
 

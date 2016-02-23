@@ -86,7 +86,7 @@ public class ControlCamara : MonoBehaviour {
 		}
 
 		if(input.y != 0){
-			float distanciaY = Mathf.Sign(input.y) < 0 ? 0f : 3f;
+			float distanciaY = Mathf.Sign(input.y) < 0 ? 1f : 3f;
 			Vector3 lerpTo = new Vector3(newPosition.x, distanciaY, newPosition.z);
 			newPosition = Vector3.Lerp(newPosition, lerpTo, Time.deltaTime);
 		}

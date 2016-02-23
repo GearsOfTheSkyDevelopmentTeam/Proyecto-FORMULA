@@ -11,6 +11,12 @@ public class UIController : MonoBehaviour{
 
 	GameObject quitZoom;
 
+	GameObject hoverInfoPanel;
+	List<Image> hoverInfoPanelImages;
+	Text hoverInfoPanelText;
+	Color hoverInfoPanelTargetColor;
+	Vector3 hoverInfoPanelOffset = new Vector3(0, .8f, 0);
+
 	GameObject colorPanel;
 	Text textoColor;
 
@@ -26,6 +32,12 @@ public class UIController : MonoBehaviour{
 	private UIController() {}
 
 	void Start(){
+		hoverInfoPanel = GameObject.Find("HoverInfoPanel");
+		hoverInfoPanelImages = new List<Image>();
+		hoverInfoPanelImages.Add(hoverInfoPanel.GetComponent<Image>());
+		hoverInfoPanelImages.Add(hoverInfoPanel.transform.Find("Image").GetComponent<Image>());;
+		hoverInfoPanelText = hoverInfoPanel.transform.Find("Text").GetComponent<Text>();
+
 		botones = new Dictionary<string, Boton>();
 		botones.Add("QuitZoom", new Boton());
 		botones.Add("ExitMainPanel", new Boton());
@@ -34,6 +46,8 @@ public class UIController : MonoBehaviour{
 		quitZoom = GameObject.Find("QuitZoomButton");
 		quitZoom.SetActive(false);
 
+		hoverInfoPanel = GameObject.Find("HoverInfoPanel");
+
 		colorPanel = GameObject.Find("ColorPanel");
 		textoColor = colorPanel.transform.Find("Color").GetComponent<Text>();
 		colorPanel.SetActive(false);
@@ -41,6 +55,10 @@ public class UIController : MonoBehaviour{
 		mainPanel = GameObject.Find("MainPanel");
 		exitMainPanel = mainPanel.transform.Find("Exit").gameObject;
 		mainPanel.SetActive(false);
+	}
+
+	void Update(){
+		UpdateInfoPanelColor();
 	}
 
 	public void Zoom(ParteCarro _parteCarro){
@@ -79,6 +97,27 @@ public class UIController : MonoBehaviour{
 
 	public void CambiarColor(int i){
 		textoColor.text = parteCarro.CambiarColor(i);
+	}
+
+	public void SetInfoPanelColor(Color targetColor, string info, Vector3 position){
+		Vector3 screenPos = Camera.main.WorldToScreenPoint(position + hoverInfoPanelOffset);
+		hoverInfoPanelText.text = info;
+		hoverInfoPanel.transform.position = screenPos;
+		hoverInfoPanelTargetColor = targetColor;
+	}
+
+	public void UnsetInfoPanelColor(){
+		hoverInfoPanelTargetColor = Color.clear;
+	}
+
+	void UpdateInfoPanelColor(){
+		if(hoverInfoPanelImages[0].color != hoverInfoPanelTargetColor){
+			Color newColor = Color.Lerp(hoverInfoPanelImages[0].color, hoverInfoPanelTargetColor, .4f);
+			foreach(Image img in hoverInfoPanelImages){
+				img.color = newColor;
+			}
+			hoverInfoPanelText.color = newColor;
+		}
 	}
 
 	// singleton

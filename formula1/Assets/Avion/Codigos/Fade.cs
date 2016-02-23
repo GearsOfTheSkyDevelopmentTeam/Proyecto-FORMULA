@@ -20,21 +20,12 @@ public class Fade : MonoBehaviour {
 		//Debug.Log(rend.material.color.a);
 		color = rend.material.color;
 		if(!NivelTerminado){
-			if(color.a > 0.0f){
+			if (color.a > 0.0f) {
 
 				color.a -= Time.deltaTime * Reduccion;
-			}
-		}else{
-			if(color.a <= 255){
+			} else {
 
-				color.a += Time.deltaTime * 0.8f;
-			}
-
-			if(rend.material.color.a >= 1.2f){
-
-				NivelTerminado = false;
-				movAvion.ActivarMov = true;
-				Application.LoadLevel (1);
+				this.gameObject.SetActive (false);
 			}
 		}
 

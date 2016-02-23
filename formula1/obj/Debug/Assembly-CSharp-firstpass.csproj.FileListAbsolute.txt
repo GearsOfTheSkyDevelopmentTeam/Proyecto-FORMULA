@@ -40,3 +40,5 @@ D:\Users\Victor\Desktop\formula1\Temp\bin\Debug\UnityEngine.Networking.xml
 D:\Users\Victor\Desktop\formula1\obj\Debug\Assembly-CSharp-firstpass.csprojResolveAssemblyReference.cache
 D:\Users\Victor\Desktop\formula1\obj\Debug\Assembly-CSharp-firstpass.dll
 D:\Users\Victor\Desktop\formula1\obj\Debug\Assembly-CSharp-firstpass.pdb
+C:\Users\luis\Desktop\formula\Proyecto-FORMULA-development\formula1\obj\Debug\Assembly-CSharp-firstpass.dll
+C:\Users\luis\Desktop\formula\Proyecto-FORMULA-development\formula1\obj\Debug\Assembly-CSharp-firstpass.pdb

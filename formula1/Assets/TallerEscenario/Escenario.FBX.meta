@@ -1,0 +1,344 @@
+fileFormatVersion: 2
+guid: b9ec3345a7dd0a842869fb8620e19765
+timeCreated: 1456099821
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: AI20_001_02_trans
+    100002: AI20_001_05_trans
+    100004: AI20_001_06_trans
+    100006: AI20_001_06_trans_offset
+    100008: AI20_001_07_trans
+    100010: AI20_001_08_trans
+    100012: AI20_001_08_trans_offset
+    100014: AI20_001_170_trans
+    100016: AI20_001_36_trans
+    100018: AI20_001_36_trans_offset
+    100020: AI20_001_37_trans
+    100022: AI20_001_37_trans_offset
+    100024: AI20_001_73_trans
+    100026: AI20_001_73_trans_offset
+    100028: AI20_001_74_trans
+    100030: AI20_001_74_trans_offset
+    100032: AI20_001_75_trans
+    100034: AI20_001_75_trans_offset
+    100036: AI20_001_75_trans_offset_MeshPart0
+    100038: AI20_001_75_trans_offset_MeshPart1
+    100040: AI20_001_75_trans_offset_MeshPart2
+    100042: AI20_001_75_trans_offset_MeshPart3
+    100044: AI20_001_84_trans
+    100046: AI20_001_85_trans
+    100048: //RootNode
+    100050: Exterior_lght
+    100052: Exterior_lght1
+    100054: Exterior_lght2
+    100056: Exterior_lght3
+    100058: Exterior_lght4
+    100060: Exterior_lght5
+    100062: Exterior_lght6
+    100064: Exterior_lght8
+    100066: F1_CAR
+    100068: PosicionCarro
+    100070: spot_azul_med
+    100072: spot_azul_med1
+    100074: spot_azul_med2
+    100076: Spot_luces
+    100078: Spot_top_roof_central
+    100080: Spot_top_roof_central1
+    100082: Spot_top_roof_central10
+    100084: Spot_top_roof_central11
+    100086: Spot_top_roof_central12
+    100088: Spot_top_roof_central13
+    100090: Spot_top_roof_central14
+    100092: Spot_top_roof_central15
+    100094: Spot_top_roof_central16
+    100096: Spot_top_roof_central17
+    100098: Spot_top_roof_central18
+    100100: Spot_top_roof_central19
+    100102: Spot_top_roof_central2
+    100104: Spot_top_roof_central20
+    100106: Spot_top_roof_central21
+    100108: Spot_top_roof_central22
+    100110: Spot_top_roof_central23
+    100112: Spot_top_roof_central24
+    100114: Spot_top_roof_central25
+    100116: Spot_top_roof_central26
+    100118: Spot_top_roof_central27
+    100120: Spot_top_roof_central28
+    100122: Spot_top_roof_central29
+    100124: Spot_top_roof_central3
+    100126: Spot_top_roof_central30
+    100128: Spot_top_roof_central31
+    100130: Spot_top_roof_central32
+    100132: Spot_top_roof_central33
+    100134: Spot_top_roof_central34
+    100136: Spot_top_roof_central35
+    100138: Spot_top_roof_central36
+    100140: Spot_top_roof_central37
+    100142: Spot_top_roof_central38
+    100144: Spot_top_roof_central39
+    100146: Spot_top_roof_central4
+    100148: Spot_top_roof_central40
+    100150: Spot_top_roof_central41
+    100152: Spot_top_roof_central42
+    100154: Spot_top_roof_central43
+    100156: Spot_top_roof_central44
+    100158: Spot_top_roof_central45
+    100160: Spot_top_roof_central46
+    100162: Spot_top_roof_central47
+    100164: Spot_top_roof_central5
+    100166: Spot_top_roof_central6
+    100168: Spot_top_roof_central7
+    100170: Spot_top_roof_central8
+    100172: Spot_top_roof_central9
+    100174: spotLight1
+    100176: spotLight1 1
+    100178: spotLight1 2
+    100180: spotLight10
+    100182: spotLight11
+    100184: spotLight12
+    100186: spotLight13
+    100188: spotLight14
+    100190: spotLight15
+    100192: spotLight15 1
+    100194: spotLight15 2
+    100196: spotLight16
+    100198: spotLight16 1
+    100200: spotLight2
+    100202: spotLight2 1
+    100204: spotLight2 2
+    100206: spotLight3
+    100208: spotLight4
+    100210: spotLight5
+    100212: spotLight6
+    100214: spotLight7
+    100216: spotLight8
+    100218: spotLight9
+    400000: AI20_001_02_trans
+    400002: AI20_001_05_trans
+    400004: AI20_001_06_trans
+    400006: AI20_001_06_trans_offset
+    400008: AI20_001_07_trans
+    400010: AI20_001_08_trans
+    400012: AI20_001_08_trans_offset
+    400014: AI20_001_170_trans
+    400016: AI20_001_36_trans
+    400018: AI20_001_36_trans_offset
+    400020: AI20_001_37_trans
+    400022: AI20_001_37_trans_offset
+    400024: AI20_001_73_trans
+    400026: AI20_001_73_trans_offset
+    400028: AI20_001_74_trans
+    400030: AI20_001_74_trans_offset
+    400032: AI20_001_75_trans
+    400034: AI20_001_75_trans_offset
+    400036: AI20_001_75_trans_offset_MeshPart0
+    400038: AI20_001_75_trans_offset_MeshPart1
+    400040: AI20_001_75_trans_offset_MeshPart2
+    400042: AI20_001_75_trans_offset_MeshPart3
+    400044: AI20_001_84_trans
+    400046: AI20_001_85_trans
+    400048: //RootNode
+    400050: Exterior_lght
+    400052: Exterior_lght1
+    400054: Exterior_lght2
+    400056: Exterior_lght3
+    400058: Exterior_lght4
+    400060: Exterior_lght5
+    400062: Exterior_lght6
+    400064: Exterior_lght8
+    400066: F1_CAR
+    400068: PosicionCarro
+    400070: spot_azul_med
+    400072: spot_azul_med1
+    400074: spot_azul_med2
+    400076: Spot_luces
+    400078: Spot_top_roof_central
+    400080: Spot_top_roof_central1
+    400082: Spot_top_roof_central10
+    400084: Spot_top_roof_central11
+    400086: Spot_top_roof_central12
+    400088: Spot_top_roof_central13
+    400090: Spot_top_roof_central14
+    400092: Spot_top_roof_central15
+    400094: Spot_top_roof_central16
+    400096: Spot_top_roof_central17
+    400098: Spot_top_roof_central18
+    400100: Spot_top_roof_central19
+    400102: Spot_top_roof_central2
+    400104: Spot_top_roof_central20
+    400106: Spot_top_roof_central21
+    400108: Spot_top_roof_central22
+    400110: Spot_top_roof_central23
+    400112: Spot_top_roof_central24
+    400114: Spot_top_roof_central25
+    400116: Spot_top_roof_central26
+    400118: Spot_top_roof_central27
+    400120: Spot_top_roof_central28
+    400122: Spot_top_roof_central29
+    400124: Spot_top_roof_central3
+    400126: Spot_top_roof_central30
+    400128: Spot_top_roof_central31
+    400130: Spot_top_roof_central32
+    400132: Spot_top_roof_central33
+    400134: Spot_top_roof_central34
+    400136: Spot_top_roof_central35
+    400138: Spot_top_roof_central36
+    400140: Spot_top_roof_central37
+    400142: Spot_top_roof_central38
+    400144: Spot_top_roof_central39
+    400146: Spot_top_roof_central4
+    400148: Spot_top_roof_central40
+    400150: Spot_top_roof_central41
+    400152: Spot_top_roof_central42
+    400154: Spot_top_roof_central43
+    400156: Spot_top_roof_central44
+    400158: Spot_top_roof_central45
+    400160: Spot_top_roof_central46
+    400162: Spot_top_roof_central47
+    400164: Spot_top_roof_central5
+    400166: Spot_top_roof_central6
+    400168: Spot_top_roof_central7
+    400170: Spot_top_roof_central8
+    400172: Spot_top_roof_central9
+    400174: spotLight1
+    400176: spotLight1 1
+    400178: spotLight1 2
+    400180: spotLight10
+    400182: spotLight11
+    400184: spotLight12
+    400186: spotLight13
+    400188: spotLight14
+    400190: spotLight15
+    400192: spotLight15 1
+    400194: spotLight15 2
+    400196: spotLight16
+    400198: spotLight16 1
+    400200: spotLight2
+    400202: spotLight2 1
+    400204: spotLight2 2
+    400206: spotLight3
+    400208: spotLight4
+    400210: spotLight5
+    400212: spotLight6
+    400214: spotLight7
+    400216: spotLight8
+    400218: spotLight9
+    2300000: AI20_001_02_trans
+    2300002: AI20_001_05_trans
+    2300004: AI20_001_06_trans_offset
+    2300006: AI20_001_07_trans
+    2300008: AI20_001_08_trans_offset
+    2300010: AI20_001_170_trans
+    2300012: AI20_001_36_trans_offset
+    2300014: AI20_001_37_trans_offset
+    2300016: AI20_001_73_trans_offset
+    2300018: AI20_001_74_trans_offset
+    2300020: AI20_001_75_trans_offset_MeshPart0
+    2300022: AI20_001_75_trans_offset_MeshPart1
+    2300024: AI20_001_75_trans_offset_MeshPart2
+    2300026: AI20_001_75_trans_offset_MeshPart3
+    2300028: AI20_001_84_trans
+    2300030: AI20_001_85_trans
+    2300032: PosicionCarro
+    3300000: AI20_001_02_trans
+    3300002: AI20_001_05_trans
+    3300004: AI20_001_06_trans_offset
+    3300006: AI20_001_07_trans
+    3300008: AI20_001_08_trans_offset
+    3300010: AI20_001_170_trans
+    3300012: AI20_001_36_trans_offset
+    3300014: AI20_001_37_trans_offset
+    3300016: AI20_001_73_trans_offset
+    3300018: AI20_001_74_trans_offset
+    3300020: AI20_001_75_trans_offset_MeshPart0
+    3300022: AI20_001_75_trans_offset_MeshPart1
+    3300024: AI20_001_75_trans_offset_MeshPart2
+    3300026: AI20_001_75_trans_offset_MeshPart3
+    3300028: AI20_001_84_trans
+    3300030: AI20_001_85_trans
+    3300032: PosicionCarro
+    4300000: AI20_001_84_trans
+    4300002: AI20_001_85_trans
+    4300004: AI20_001_170_trans
+    4300006: AI20_001_75_trans_offset_MeshPart0
+    4300008: AI20_001_75_trans_offset_MeshPart1
+    4300010: AI20_001_75_trans_offset_MeshPart2
+    4300012: AI20_001_75_trans_offset_MeshPart3
+    4300014: AI20_001_74_trans_offset
+    4300016: AI20_001_73_trans_offset
+    4300018: AI20_001_37_trans_offset
+    4300020: AI20_001_36_trans_offset
+    4300022: AI20_001_08_trans_offset
+    4300024: AI20_001_07_trans
+    4300026: AI20_001_06_trans_offset
+    4300028: AI20_001_05_trans
+    4300030: AI20_001_02_trans
+    4300032: PosicionCarro
+    7400000: Take 001
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
