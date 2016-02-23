@@ -1,65 +1,34 @@
-<!DOCTYPE html>
-<html>
-
+<!doctype html>
+<html lang="en-us">
   <head>
-	<meta charset='utf-8'>
-	<meta http-equiv="X-UA-Compatible" content="chrome=1">
-	<meta name="description" content="Proyecto-formula : ">
-
-	<link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-	<title>Proyecto-formula</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | formula1</title>
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <link rel="shortcut icon" href="TemplateData/favicon.ico" />
+    <script src="TemplateData/UnityProgress.js"></script>
   </head>
-
-  <body>
-
-	<!-- HEADER -->
-	<div id="header_wrap" class="outer">
-		<header class="inner">
-		  <a id="forkme_banner" href="https://github.com/GearsOfTheSkyDevelopmentTeam/Proyecto-FORMULA">View on GitHub</a>
-
-		  <h1 id="project_title">Proyecto-formula</h1>
-		  <h2 id="project_tagline"></h2>
-
-			<section id="downloads"><!-- 
-			  <a class="zip_download_link" href="https://github.com/GearsOfTheSkyDevelopmentTeam/Proyecto-FORMULA/zipball/master">Download this project as a .zip file</a>
-			  <a class="tar_download_link" href="https://github.com/GearsOfTheSkyDevelopmentTeam/Proyecto-FORMULA/tarball/master">Download this project as a tar.gz file</a>
-			</section> -->
-		</header>
-	</div>
-
-	<!-- MAIN CONTENT -->
-	<div id="main_content_wrap" class="outer">
-	  <section id="main_content" class="inner">
-		<h3>
-<a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Proyecto</h3>
-
-<p> 
-	Demo de la version actual <a href="Builds/Main/">-->AQUI<--</a>
-</p>
-
-<h3>
-<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>Victor Tortolero -> <a href="https://github.com/TheMightyPenguin">@TheMightyPenguinYou</a></p>
-<p>Luis Gigante -> <a href="https://github.com/lincetox">@lincetox</a></p>
-
-<h3>
-<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out our <a href="https://help.github.com/pages">documentation</a> or <a href="https://github.com/contact">contact support</a> and we’ll help you sort it out.</p>
-	  </section>
-	</div>
-
-	<!-- FOOTER  -->
-	<div id="footer_wrap" class="outer">
-	  <footer class="inner">
-		<p class="copyright">Proyecto-formula maintained by <a href="https://github.com/GearsOfTheSkyDevelopmentTeam">GearsOfTheSkyDevelopmentTeam</a></p>
-		<p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
-	  </footer>
-	</div>
-
-	
+  <body class="template">
+    <p class="header"><span>Unity WebGL Player | </span>formula1</p>
+    <div class="template-wrap clear">
+      <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" height="600px" width="960px"></canvas>
+      <br>
+      <div class="logo"></div>
+      <div class="fullscreen"><img src="TemplateData/fullscreen.png" width="38" height="38" alt="Fullscreen" title="Fullscreen" onclick="SetFullscreen(1);" /></div>
+      <div class="title">formula1</div>
+    </div>
+    <p class="footer">&laquo; created with <a href="http://unity3d.com/" title="Go to unity3d.com">Unity</a> &raquo;</p>
+    <script type='text/javascript'>
+  var Module = {
+    TOTAL_MEMORY: 268435456,
+    errorhandler: null,			// arguments: err, url, line. This function must return 'true' if the error is handled, otherwise 'false'
+    compatibilitycheck: null,
+    dataUrl: "Release/gh-pages.data",
+    codeUrl: "Release/gh-pages.js",
+    memUrl: "Release/gh-pages.mem",
+  };
+</script>
+<script src="Release/UnityLoader.js"></script>
 
   </body>
 </html>
