@@ -11,20 +11,19 @@ public class UIController : MonoBehaviour{
 
 	GameObject quitZoom;
 
-	GameObject hoverInfoPanel;
-	List<Image> hoverInfoPanelImages;
-	Text hoverInfoPanelText;
-	Color hoverInfoPanelTargetColor;
-	Vector3 hoverInfoPanelOffset = new Vector3(0, .8f, 0);
+	public InfoPanel infoPanel;
+	public List<string> infoPanelNames = new List<string>();
 
 	GameObject colorPanel;
 	Text textoColor;
 
+	GameObject canvasPanel;
+
 	// botones disponibles:
 	// exitMainPanel, quitZoom, Zoom
-	Dictionary<string, Boton> botones;
+//	Dictionary<string, Boton> botones;
 
-	ParteCarro parteCarro = null;
+	public ParteCarro parteCarro = null;
 
 	private static UIController _instance;
 
@@ -32,21 +31,10 @@ public class UIController : MonoBehaviour{
 	private UIController() {}
 
 	void Start(){
-		hoverInfoPanel = GameObject.Find("HoverInfoPanel");
-		hoverInfoPanelImages = new List<Image>();
-		hoverInfoPanelImages.Add(hoverInfoPanel.GetComponent<Image>());
-		hoverInfoPanelImages.Add(hoverInfoPanel.transform.Find("Image").GetComponent<Image>());;
-		hoverInfoPanelText = hoverInfoPanel.transform.Find("Text").GetComponent<Text>();
-
-		botones = new Dictionary<string, Boton>();
-		botones.Add("QuitZoom", new Boton());
-		botones.Add("ExitMainPanel", new Boton());
-		botones.Add("Zoom", new Boton());
+		canvasPanel = GameObject.Find("CanvasPanel");
 
 		quitZoom = GameObject.Find("QuitZoomButton");
 		quitZoom.SetActive(false);
-
-		hoverInfoPanel = GameObject.Find("HoverInfoPanel");
 
 		colorPanel = GameObject.Find("ColorPanel");
 		textoColor = colorPanel.transform.Find("Color").GetComponent<Text>();
@@ -58,7 +46,9 @@ public class UIController : MonoBehaviour{
 	}
 
 	void Update(){
-		UpdateInfoPanelColor();
+		if(infoPanel != null ){
+			infoPanel.UpdatePanelColor(parteCarro.transform.position);
+		}
 	}
 
 	public void Zoom(ParteCarro _parteCarro){
@@ -99,26 +89,7 @@ public class UIController : MonoBehaviour{
 		textoColor.text = parteCarro.CambiarColor(i);
 	}
 
-	public void SetInfoPanelColor(Color targetColor, string info, Vector3 position){
-		Vector3 screenPos = Camera.main.WorldToScreenPoint(position + hoverInfoPanelOffset);
-		hoverInfoPanelText.text = info;
-		hoverInfoPanel.transform.position = screenPos;
-		hoverInfoPanelTargetColor = targetColor;
-	}
 
-	public void UnsetInfoPanelColor(){
-		hoverInfoPanelTargetColor = Color.clear;
-	}
-
-	void UpdateInfoPanelColor(){
-		if(hoverInfoPanelImages[0].color != hoverInfoPanelTargetColor){
-			Color newColor = Color.Lerp(hoverInfoPanelImages[0].color, hoverInfoPanelTargetColor, .4f);
-			foreach(Image img in hoverInfoPanelImages){
-				img.color = newColor;
-			}
-			hoverInfoPanelText.color = newColor;
-		}
-	}
 
 	// singleton
 	public static UIController instance{
@@ -131,35 +102,106 @@ public class UIController : MonoBehaviour{
 			}
 			return _instance;
 		}
+	}		
+
+	GameObject RandomPanelPrefab(){
+		string name = infoPanelNames[Random.Range(0, infoPanelNames.Count)];
+		print(name);
+		GameObject panel = Instantiate(Resources.Load(name, typeof(GameObject)) as GameObject);
+		return panel;
 	}
 
+	public class InfoPanel{
+		GameObject infoPanel;
+		List<Image> imagenesPanel;
+		Text textoPanel;
+		Color targetColor;
+		Vector3 infoPanelOffset;
+
+		public InfoPanel(GameObject panel, Vector3 offset, Color target){
+//			if(infoPanel != null){
+//				Destroy(infoPanel);
+//			}
+			panel.transform.SetParent(instance.canvasPanel.transform);
+			infoPanel = panel;
+			imagenesPanel = new List<Image>();
+			imagenesPanel.Add(panel.GetComponent<Image>());
+			imagenesPanel.Add(panel.transform.Find("Image").GetComponent<Image>());
+			textoPanel = panel.transform.Find("Text").GetComponent<Text>();
+			infoPanelOffset = offset;
+			targetColor = target;
+
+		}
+
+		public InfoPanel(Vector3 offset, Color target){
+//			if(infoPanel != null){
+//				Destroy(infoPanel);
+//			}
+			infoPanel = instance.RandomPanelPrefab();
+			infoPanel.transform.SetParent(instance.canvasPanel.transform);
+			imagenesPanel = new List<Image>();
+			imagenesPanel.Add(infoPanel.GetComponent<Image>());
+			imagenesPanel.Add(infoPanel.transform.Find("Image").GetComponent<Image>());
+			textoPanel = infoPanel.transform.Find("Text").GetComponent<Text>();
+			infoPanelOffset = offset;
+			targetColor = target;
+		}
+
+		public void SetPanelColor(Color _targetColor, string info, Vector3 position){
+			Vector3 screenPos = Camera.main.WorldToScreenPoint(position + infoPanelOffset);
+			textoPanel.text = info;
+			infoPanel.transform.position = screenPos;
+			targetColor = _targetColor;
+		}
+
+		public void UpdatePanelColor(Vector3 position){
+			if(infoPanel != null){
+				Vector3 screenPos = Camera.main.WorldToScreenPoint(position + infoPanelOffset);
+				infoPanel.transform.position = screenPos;
+				print(imagenesPanel[0].color);
+				print(imagenesPanel[1].color);
+				if(imagenesPanel[0].color != targetColor){
+					Color newColor = Color.Lerp(imagenesPanel[0].color, targetColor, .4f);
+					foreach(Image img in imagenesPanel){
+						img.color = targetColor;
+					}
+					textoPanel.color = targetColor;
+				}
+			}
+		}
+
+		public void UnsetInfoPanelColor(){
+			targetColor = Color.clear;
+			Destroy(infoPanel);
+		}
+	}
 
 	// estructura auxiliar para el manejo de botones
-	public struct Boton{
-		bool presiono;
-		bool solto;
-
-		public Boton(bool _presiono=false, bool _solto=true){
-			presiono = _presiono;
-			solto = _solto;
-		}
-
-		public void Actualizar(bool _presiono, bool _solto){
-			this = new Boton(_presiono, _solto);
-		}
-
-		bool EstaPresionado(){
-			return presiono && !solto;
-		}
-	}
-
-	public void PresionarBoton(string nombreBoton){
-		botones[nombreBoton].Actualizar(true, false);
-	}
-
-	public void SoltarBoton(string nombreBoton){
-		botones[nombreBoton].Actualizar(false, true);
-	}
+//	public struct Boton{
+//		bool presiono;
+//		bool solto;
+//
+//		public Boton(bool _presiono=false, bool _solto=true){
+//			presiono = _presiono;
+//			solto = _solto;
+//		}
+//
+//		public void Actualizar(bool _presiono, bool _solto){
+//			this = new Boton(_presiono, _solto);
+//		}
+//
+//		bool EstaPresionado(){
+//			return presiono && !solto;
+//		}
+//	}
+//
+//	public void PresionarBoton(string nombreBoton){
+//		botones[nombreBoton].Actualizar(true, false);
+//	}
+//
+//	public void SoltarBoton(string nombreBoton){
+//		botones[nombreBoton].Actualizar(false, true);
+//	}
 }
 
 //	public static void Strech(GameObject _sprite, Vector3 _initialPosition, Vector3 _finalPosition, bool _mirrorZ){

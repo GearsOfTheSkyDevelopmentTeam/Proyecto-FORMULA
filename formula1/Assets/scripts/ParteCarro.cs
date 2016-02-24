@@ -8,6 +8,8 @@ public class ParteCarro : MonoBehaviour {
 	Renderer rendPadre;
 	public Vector3 desplazamientoLocal;
 
+	static Color blue = new Color(1f, .76f, 0f, .80f);
+
 	[TextArea(2, 10)]
 	public string informacion;
 	public bool drawGizmos = false;
@@ -49,7 +51,7 @@ public class ParteCarro : MonoBehaviour {
 		if(ControlCamara.instance.clickBlockeado){
 			rend.material.SetFloat("_Outline", 0);
 			if(esParte){
-				UIController.instance.UnsetInfoPanelColor();
+				UIController.instance.infoPanel.UnsetInfoPanelColor();
 			}
 		}
 
@@ -103,14 +105,21 @@ public class ParteCarro : MonoBehaviour {
 		if(!ControlCamara.instance.clickBlockeado){
 			rend.enabled = true;
 			rend.material.SetFloat("_Outline",2f);
+			UIController.instance.parteCarro = this;
+			if(esParte){
+				UIController.instance.infoPanel = new UIController.InfoPanel(new Vector3(0, .7f, 0), blue);
+			}else{
+				string name = "UIConductor";
+				GameObject panel = Instantiate(Resources.Load(name) as GameObject);
+				UIController.instance.infoPanel = new UIController.InfoPanel(panel, new Vector3(0, .5f, 1.5f), blue);
+			}
+			UIController.instance.infoPanel.SetPanelColor(blue, informacion, transform.position);
 		}
 	}
 
 	void OnMouseOver() {
 		if(!ControlCamara.instance.clickBlockeado){
-			if(esParte){
-				UIController.instance.SetInfoPanelColor(Color.black, informacion, transform.position);
-			}
+			
 		}
 	}
 
@@ -119,17 +128,17 @@ public class ParteCarro : MonoBehaviour {
 		if(!ControlCamara.instance.clickBlockeado){
 			rend.enabled = false;
 			rend.material.SetFloat ("_Outline", 0);
-			if(esParte){
-				UIController.instance.UnsetInfoPanelColor();
-			}
+			UIController.instance.infoPanel.UnsetInfoPanelColor();
 		}
 	}
 
 	void OnMouseDown(){
-		if(esParte){
-			UIController.instance.ActivarUIParte(this);
-		}else{
-			UIController.instance.Zoom(this);
+		if (!ControlCamara.instance.clickBlockeado) {
+			if (esParte) {
+				UIController.instance.ActivarUIParte (this);
+			} else {
+				UIController.instance.Zoom (this);
+			}
 		}
 	}
 

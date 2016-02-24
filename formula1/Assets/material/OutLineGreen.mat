@@ -94,6 +94,13 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
+          name: _Illum
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
           name: _SmoothnessTex
         second:
           m_Texture: {fileID: 0}
@@ -102,13 +109,6 @@ Material:
       data:
         first:
           name: _MatcapTex
-        second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _Illum
         second:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
@@ -168,14 +168,6 @@ Material:
         second: 1
       data:
         first:
-          name: _Outline
-        second: 0
-      data:
-        first:
-          name: _Asym
-        second: 0
-      data:
-        first:
           name: _MatcapIn
         second: 1
       data:
@@ -198,6 +190,14 @@ Material:
         first:
           name: _Emission
         second: 1
+      data:
+        first:
+          name: _Outline
+        second: 0
+      data:
+        first:
+          name: _Asym
+        second: 0
     m_Colors:
       data:
         first:
@@ -209,16 +209,16 @@ Material:
         second: {r: 0.5882353, g: 0.5882353, b: 0.5882353, a: 0}
       data:
         first:
+          name: _RimColor
+        second: {r: 0.26, g: 0.19, b: 0.16, a: 0}
+      data:
+        first:
           name: _OutlineColor
-        second: {r: 0, g: 1, b: 0.95862055, a: 1}
+        second: {r: 1, g: 0.76551723, b: 0, a: 1}
       data:
         first:
           name: _Asymmetry
         second: {r: 0, g: 0.25, b: 0.5, a: 0}
-      data:
-        first:
-          name: _RimColor
-        second: {r: 0.26, g: 0.19, b: 0.16, a: 0}
       data:
         first:
           name: _TintColor
