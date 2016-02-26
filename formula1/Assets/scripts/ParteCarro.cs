@@ -8,7 +8,7 @@ public class ParteCarro : MonoBehaviour {
 	Renderer rendPadre;
 	public Vector3 desplazamientoLocal;
 
-	static Color blue = new Color(1f, .76f, 0f, .80f);
+	public static Color blue = new Color(1f, .76f, 0f, .80f);
 
 	[TextArea(2, 10)]
 	public string informacion;
@@ -62,8 +62,8 @@ public class ParteCarro : MonoBehaviour {
 			if(rend){
 				rend.material.SetFloat("_Outline", 0);
 			}
-			if(esParte){
-				UIController.instance.infoPanel.UnsetInfoPanelColor();
+			if(!esParte && !UIController.instance){
+				UIController.instance.infoPanel.UnsetInfoPanelColor( true );
 			}
 		}
 			
@@ -120,22 +120,16 @@ public class ParteCarro : MonoBehaviour {
 				rend.material.SetFloat("_Outline", 2f);
 			}
 			UIController.instance.parteCarro = this;
-			if(esParte){
-				UIController.instance.infoPanel = new UIController.InfoPanel(new Vector3(0, .7f, 0), blue);
-			}else{
+
+			if(!esParte){
+				
 				string name = "UIConductor";
 				GameObject panel = Instantiate(Resources.Load(name) as GameObject);
-				UIController.instance.infoPanel = new UIController.InfoPanel(panel, new Vector3(0, .5f, 1.5f), blue);
+				UIController.instance.infoPanel = new UIController.InfoPanel(panel, new Vector3(0, 0f, -.8f), blue);
+				UIController.instance.infoPanel.SetPanelColor(blue, informacion, transform.position);
 			}
-			UIController.instance.infoPanel.SetPanelColor(blue, informacion, transform.position);
 		}
-	}
-
-	void OnMouseOver() {
-		if(!ControlCamara.instance.clickBlockeado){
-			
-		}
-	}
+	}		
 
 
 	void OnMouseExit(){
@@ -144,17 +138,13 @@ public class ParteCarro : MonoBehaviour {
 				rend.enabled = false;
 				rend.material.SetFloat("_Outline", 0);
 			}
-			UIController.instance.infoPanel.UnsetInfoPanelColor();
+			if(!esParte) UIController.instance.infoPanel.UnsetInfoPanelColor( true );
 		}
 	}
 
 	void OnMouseDown(){
 		if(!ControlCamara.instance.clickBlockeado){
-			if(esParte){
-				UIController.instance.ActivarUIParte (this);
-			}else{
-				UIController.instance.Zoom(this);
-			}
+			UIController.instance.Zoom(this);
 		}
 	}
 

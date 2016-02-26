@@ -74,7 +74,7 @@ public class UIController : MonoBehaviour{
 		parteCarro.SetEtiquetas(false);
 		ControlCamara.instance.Reset();
 		if(parteCarro.esParte){
-			ActivarUIParte(parteCarro);
+			//ActivarUIParte(parteCarro);
 		}
 	}
 		
@@ -171,9 +171,12 @@ public class UIController : MonoBehaviour{
 			}
 		}
 
-		public void UnsetInfoPanelColor(){
-			targetColor = Color.clear;
-			Destroy(infoPanel);
+		public void UnsetInfoPanelColor(bool SWAG){
+
+			if(SWAG){
+				targetColor = Color.clear;
+				Destroy(infoPanel);
+			}
 		}
 	}
 }

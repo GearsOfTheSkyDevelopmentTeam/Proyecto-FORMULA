@@ -30,12 +30,26 @@ public class EtiquetaPrecio : MonoBehaviour{
 				r.material.SetColor("_TintColor", Color.green - new Color(0, 0, 0, .4f));
 			}
 		}
+
+		if(UIController.instance.zoom){
+			
+			UIController.instance.infoPanel = new UIController.InfoPanel(new Vector3(0, 0f, -.8f), ParteCarro.blue);
+			UIController.instance.infoPanel.SetPanelColor(ParteCarro.blue, nombreCosto, transform.position);
+		}
 	}
 
 	void OnMouseExit(){
 		foreach(Renderer r in rdrs){
 			r.material.SetColor("_TintColor", Color.clear);
 		}
+
+		UIController.instance.infoPanel.UnsetInfoPanelColor( true );
+	}
+		
+	void OnMouseDown(){
+
+
+
 	}
 
 	void InicializarColores(){
