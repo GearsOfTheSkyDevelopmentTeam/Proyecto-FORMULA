@@ -49,13 +49,15 @@ public class ParteCarro : MonoBehaviour {
 
 	void Update(){
 		if(ControlCamara.instance.clickBlockeado){
-			rend.material.SetFloat("_Outline", 0);
+			if(rend){
+				rend.material.SetFloat("_Outline", 0);
+			}
 			if(esParte){
 				UIController.instance.infoPanel.UnsetInfoPanelColor();
 			}
 		}
 
-		if(esParte && rendPadre.material.color != targetColor){
+		if(esParte && rendPadre && rendPadre.material.color != targetColor){
 			rendPadre.material.color = Color.Lerp(rendPadre.material.color, targetColor, .2f);
 		}
 	}
@@ -103,8 +105,10 @@ public class ParteCarro : MonoBehaviour {
 
 	void OnMouseEnter() {
 		if(!ControlCamara.instance.clickBlockeado){
-			rend.enabled = true;
-			rend.material.SetFloat("_Outline",2f);
+			if(rend){
+				rend.enabled = true;
+				rend.material.SetFloat("_Outline", 2f);
+			}
 			UIController.instance.parteCarro = this;
 			if(esParte){
 				UIController.instance.infoPanel = new UIController.InfoPanel(new Vector3(0, .7f, 0), blue);
@@ -126,18 +130,20 @@ public class ParteCarro : MonoBehaviour {
 
 	void OnMouseExit(){
 		if(!ControlCamara.instance.clickBlockeado){
-			rend.enabled = false;
-			rend.material.SetFloat ("_Outline", 0);
+			if(rend){
+				rend.enabled = false;
+				rend.material.SetFloat("_Outline", 0);
+			}
 			UIController.instance.infoPanel.UnsetInfoPanelColor();
 		}
 	}
 
 	void OnMouseDown(){
-		if (!ControlCamara.instance.clickBlockeado) {
-			if (esParte) {
+		if(!ControlCamara.instance.clickBlockeado){
+			if(esParte){
 				UIController.instance.ActivarUIParte (this);
-			} else {
-				UIController.instance.Zoom (this);
+			}else{
+				UIController.instance.Zoom(this);
 			}
 		}
 	}

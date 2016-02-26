@@ -106,7 +106,6 @@ public class UIController : MonoBehaviour{
 
 	GameObject RandomPanelPrefab(){
 		string name = infoPanelNames[Random.Range(0, infoPanelNames.Count)];
-		print(name);
 		GameObject panel = Instantiate(Resources.Load(name, typeof(GameObject)) as GameObject);
 		return panel;
 	}
@@ -158,8 +157,6 @@ public class UIController : MonoBehaviour{
 			if(infoPanel != null){
 				Vector3 screenPos = Camera.main.WorldToScreenPoint(position + infoPanelOffset);
 				infoPanel.transform.position = screenPos;
-				print(imagenesPanel[0].color);
-				print(imagenesPanel[1].color);
 				if(imagenesPanel[0].color != targetColor){
 					Color newColor = Color.Lerp(imagenesPanel[0].color, targetColor, .4f);
 					foreach(Image img in imagenesPanel){

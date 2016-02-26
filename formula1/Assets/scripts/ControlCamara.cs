@@ -112,7 +112,7 @@ public class ControlCamara : MonoBehaviour {
 			restricciones.minZ = newPosition.z - valX;
 			restricciones.maxZ = newPosition.z + valX;
 
-			restricciones.minY = newPosition.y;
+			restricciones.minY = newPosition.y - .3f;
 			restricciones.maxY = newPosition.y + .5f;
 
 			StopCoroutine("MoverHacia");
