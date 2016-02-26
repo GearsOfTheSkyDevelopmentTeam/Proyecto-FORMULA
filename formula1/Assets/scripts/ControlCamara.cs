@@ -13,8 +13,7 @@ public class ControlCamara : MonoBehaviour {
 	public static Vector3 posicionInicio = new Vector3(0,0,0);
 	public static bool Seleccion = false;
 
-	public float distance = 10f, height = 1.3f, width,izq,dere, heightDamping = 4f;
-	private float currentRotationAngle, currentHeight, currentWidth;
+	public float distance = 10f, width,izq,dere;
 	public Quaternion currentRotation;
 	public static bool escape = false;
 

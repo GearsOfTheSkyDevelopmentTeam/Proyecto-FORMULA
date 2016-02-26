@@ -1775,13 +1775,11 @@ MonoBehaviour:
   modo: 0
   target: {fileID: 0}
   smooth: 0.3
-  veloRotaY: 45
+  veloRotaY: 100
   distance: 10
-  height: 3.14
   width: 0
   izq: 0
   dere: 0
-  heightDamping: 4
   currentRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &287774517
 MonoBehaviour:
@@ -4441,7 +4439,7 @@ GameObject:
   - 114: {fileID: 611820336}
   m_Layer: 0
   m_Name: ConductorSpotCamera
-  m_TagString: Untagged
+  m_TagString: Conductor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4452,7 +4450,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 611820335}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eab0db963873a7e45859c8d7a0634283, type: 3}
   m_Name: 
@@ -4471,8 +4469,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1.5767238, z: 1}
+  m_Center: {x: 0, y: -0.28836167, z: 0}
 --- !u!33 &611820339
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -4487,7 +4485,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 611820335}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -53.54, y: 1.291, z: 19.76}
+  m_LocalPosition: {x: -53.54, y: 1.505, z: 19.76}
   m_LocalScale: {x: 1.003446, y: 1, z: 1.003446}
   m_Children: []
   m_Father: {fileID: 0}
@@ -11745,7 +11743,7 @@ BoxCollider:
   m_GameObject: {fileID: 1910620307}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1.3464203, z: 1}
   m_Center: {x: 0.000028844303, y: 0.1732101, z: -0.00006745795}

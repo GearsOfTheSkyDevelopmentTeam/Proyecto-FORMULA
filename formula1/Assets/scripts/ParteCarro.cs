@@ -39,7 +39,7 @@ public class ParteCarro : MonoBehaviour {
 		esParte = gameObject.tag == "Parte";
 		ModoCamara = esParte ? ControlCamara.Restringido : ControlCamara.NoRestringido;
 		rend = GetComponent<Renderer>();
-		rend.material.SetFloat("_Outline",0);
+		if(rend) rend.material.SetFloat("_Outline",0);
 
 		if(esParte){
 			rendPadre = transform.parent.GetComponent<Renderer>();
