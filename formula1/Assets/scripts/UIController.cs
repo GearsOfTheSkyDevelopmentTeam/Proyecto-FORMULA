@@ -11,6 +11,7 @@ public class UIController : MonoBehaviour{
 
 	GameObject quitZoom;
 
+	public bool zoom = false;
 	public InfoPanel infoPanel;
 	public List<string> infoPanelNames = new List<string>();
 
@@ -53,18 +54,24 @@ public class UIController : MonoBehaviour{
 
 	public void Zoom(ParteCarro _parteCarro){
 		parteCarro = _parteCarro;
+		parteCarro.SetEtiquetas(true);
 		quitZoom.SetActive(true);
+		zoom = true;
 		ControlCamara.instance.CambiarTarget(parteCarro, true);
 	}
 
 	public void Zoom(){
 		DesactivarUIParte();
+		parteCarro.SetEtiquetas(true);
 		quitZoom.SetActive(true);
+		zoom = true;
 		ControlCamara.instance.CambiarTarget(parteCarro, true);
 	}
 
 	public void QuitZoom(){
+		zoom = false;
 		quitZoom.SetActive(false);
+		parteCarro.SetEtiquetas(false);
 		ControlCamara.instance.Reset();
 		if(parteCarro.esParte){
 			ActivarUIParte(parteCarro);
@@ -133,9 +140,6 @@ public class UIController : MonoBehaviour{
 		}
 
 		public InfoPanel(Vector3 offset, Color target){
-//			if(infoPanel != null){
-//				Destroy(infoPanel);
-//			}
 			infoPanel = instance.RandomPanelPrefab();
 			infoPanel.transform.SetParent(instance.canvasPanel.transform);
 			imagenesPanel = new List<Image>();
@@ -172,7 +176,7 @@ public class UIController : MonoBehaviour{
 			Destroy(infoPanel);
 		}
 	}
-
+}
 	// estructura auxiliar para el manejo de botones
 //	public struct Boton{
 //		bool presiono;
@@ -199,7 +203,7 @@ public class UIController : MonoBehaviour{
 //	public void SoltarBoton(string nombreBoton){
 //		botones[nombreBoton].Actualizar(false, true);
 //	}
-}
+
 
 //	public static void Strech(GameObject _sprite, Vector3 _initialPosition, Vector3 _finalPosition, bool _mirrorZ){
 //		Vector3 centerPos = (_initialPosition + _finalPosition) / 2f;
