@@ -15,6 +15,10 @@ public class EtiquetaPrecio : MonoBehaviour{
 		rdrs.Add(transform.Find("Plane1").GetComponent<Renderer>());
 		rdrs.Add(transform.Find("Plane2").GetComponent<Renderer>());
 
+		foreach(Renderer r in rdrs){
+			r.material.SetColor("_TintColor", Color.clear);
+		}
+
 		InicializarColores();
 	}
 

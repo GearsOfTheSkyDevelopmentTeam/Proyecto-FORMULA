@@ -8,7 +8,7 @@ public class ControlCamara : MonoBehaviour {
 	public int modo;
 
 	public GameObject target;
-	public float smooth = 0.3F,veloRotaY=45;
+	public float smooth = 0.3F,veloRotaY=100;
 	public static Vector3 desplazamiento = new Vector3(0,0,0);
 	public static Vector3 posicionInicio = new Vector3(0,0,0);
 	public static bool Seleccion = false;

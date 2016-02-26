@@ -23,6 +23,8 @@ public class ParteCarro : MonoBehaviour {
 	static List<Color> colores;
 	static Dictionary<Color, string> nombreColores;
 
+	List<GameObject> etiquetas;
+
 	public Renderer Rend{
 		get{
 			return rendPadre;
@@ -36,6 +38,14 @@ public class ParteCarro : MonoBehaviour {
 	}
 
 	void Start(){
+		etiquetas = new List<GameObject>();
+		foreach(Transform t in GetComponentsInChildren<Transform>()){
+			if(t.parent != null && t.parent == transform){
+				etiquetas.Add(t.gameObject);
+			}
+		}
+		SetEtiquetas(false);
+
 		esParte = gameObject.tag == "Parte";
 		ModoCamara = esParte ? ControlCamara.Restringido : ControlCamara.NoRestringido;
 		rend = GetComponent<Renderer>();
@@ -56,7 +66,7 @@ public class ParteCarro : MonoBehaviour {
 				UIController.instance.infoPanel.UnsetInfoPanelColor();
 			}
 		}
-
+			
 		if(esParte && rendPadre && rendPadre.material.color != targetColor){
 			rendPadre.material.color = Color.Lerp(rendPadre.material.color, targetColor, .2f);
 		}
@@ -153,6 +163,12 @@ public class ParteCarro : MonoBehaviour {
 		if(drawGizmos){
 			Gizmos.color = Color.black;
 			Gizmos.DrawWireSphere(DesplazamientoLocal, .2f);
+		}
+	}
+
+	public void SetEtiquetas(bool value){
+		foreach(GameObject g in etiquetas){
+			g.SetActive(value);
 		}
 	}
 
