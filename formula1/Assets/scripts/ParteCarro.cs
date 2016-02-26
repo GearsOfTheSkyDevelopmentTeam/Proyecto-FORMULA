@@ -8,7 +8,7 @@ public class ParteCarro : MonoBehaviour {
 	Renderer rendPadre;
 	public Vector3 desplazamientoLocal;
 
-	public static Color blue = new Color(1f, .76f, 0f, .80f);
+	public static Color blue = new Color(1f, .76f, 0f, .6f);
 
 	[TextArea(2, 10)]
 	public string informacion;
@@ -62,7 +62,8 @@ public class ParteCarro : MonoBehaviour {
 			if(rend){
 				rend.material.SetFloat("_Outline", 0);
 			}
-			if(!esParte && UIController.instance.infoPanel != null){
+			if(!esParte && UIController.instance.infoPanel != null && !EtiquetaPrecio.Activado){
+				
 				UIController.instance.infoPanel.UnsetInfoPanelColor(true);
 			}
 		}
@@ -146,6 +147,7 @@ public class ParteCarro : MonoBehaviour {
 
 	void OnMouseDown(){
 		if(!ControlCamara.instance.clickBlockeado){
+			
 			UIController.instance.Zoom(this);
 		}
 	}

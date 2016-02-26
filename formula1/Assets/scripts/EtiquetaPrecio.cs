@@ -4,6 +4,10 @@ using System.Collections.Generic;
 
 public class EtiquetaPrecio : MonoBehaviour{
 
+	public static bool Activado = false;
+
+	private Vector3 OffsetEtiqueta = new Vector3(0,.2f,0); 
+
 	static Dictionary<string, Color> colores;
 	static Dictionary<string, float> costos;
 
@@ -11,6 +15,7 @@ public class EtiquetaPrecio : MonoBehaviour{
 	List<Renderer> rdrs;
 
 	void Start(){
+
 		rdrs = new List<Renderer>();
 		rdrs.Add(transform.Find("Plane1").GetComponent<Renderer>());
 		rdrs.Add(transform.Find("Plane2").GetComponent<Renderer>());
@@ -23,6 +28,8 @@ public class EtiquetaPrecio : MonoBehaviour{
 	}
 
 	void OnMouseEnter(){
+		Activado = true;
+
 		foreach(Renderer r in rdrs){
 			try{
 				r.material.SetColor("_TintColor", colores[nombreCosto]);
@@ -32,13 +39,16 @@ public class EtiquetaPrecio : MonoBehaviour{
 		}
 
 		if(UIController.instance.zoom){
-			
-			UIController.instance.infoPanel = new UIController.InfoPanel(new Vector3(0, 0f, -.8f), ParteCarro.blue);
+			UIController.instance.panelUpdatePosition = transform.position;
+			UIController.instance.infoPanel = new UIController.InfoPanel(OffsetEtiqueta, ParteCarro.blue);
 			UIController.instance.infoPanel.SetPanelColor(ParteCarro.blue, nombreCosto, transform.position);
+	
 		}
 	}
 
 	void OnMouseExit(){
+		Activado = false;
+
 		foreach(Renderer r in rdrs){
 			r.material.SetColor("_TintColor", Color.clear);
 		}
