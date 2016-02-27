@@ -93,7 +93,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4270590}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spotLight2 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120,7 +120,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 12666979}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spot_top_roof_central7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -640,7 +640,7 @@ GameObject:
   - 4: {fileID: 67422889}
   - 33: {fileID: 67422891}
   - 23: {fileID: 67422890}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AI20_001_75_trans_offset_MeshPart2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -702,7 +702,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 73307887}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spot_top_roof_central38
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -756,6 +756,8 @@ Transform:
   m_Children:
   - {fileID: 2146265762}
   - {fileID: 306661003}
+  - {fileID: 1614968784}
+  - {fileID: 1322871029}
   m_Father: {fileID: 1908131484}
   m_RootOrder: 0
 --- !u!114 &125091793
@@ -912,7 +914,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 155256462}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Exterior_lght3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1032,7 +1034,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 175055441}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spotLight10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1127,7 +1129,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 184317206}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spot_top_roof_central14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1224,7 +1226,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 217006393}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spotLight3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1253,7 +1255,7 @@ GameObject:
   - 4: {fileID: 217373394}
   - 33: {fileID: 217373396}
   - 23: {fileID: 217373395}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AI20_001_85_trans
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1315,7 +1317,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 228236937}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spotLight8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1343,7 +1345,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 228809336}
   - 95: {fileID: 228809335}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Escenario
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1426,7 +1428,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 258264515}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spot_top_roof_central1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1530,7 +1532,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 274899544}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spot_top_roof_central32
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1685,7 +1687,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 286063368}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spot_top_roof_central4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1714,7 +1716,7 @@ GameObject:
   - 4: {fileID: 286544835}
   - 33: {fileID: 286544837}
   - 23: {fileID: 286544836}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AI20_001_06_trans_offset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2010,7 +2012,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 292384722}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Exterior_lght6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2037,7 +2039,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 293676828}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spot_top_roof_central19
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2232,7 +2234,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 312955948}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spotLight6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2259,7 +2261,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 327709766}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spot_top_roof_central24
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2532,7 +2534,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 344264690}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spot_top_roof_central35
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2561,7 +2563,7 @@ GameObject:
   - 4: {fileID: 345182346}
   - 33: {fileID: 345182348}
   - 23: {fileID: 345182347}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AI20_001_08_trans_offset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2709,7 +2711,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 360328294}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AI20_001_36_trans
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2991,7 +2993,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 407061152}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spot_top_roof_central43
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3095,7 +3097,7 @@ GameObject:
   - 4: {fileID: 419239467}
   - 33: {fileID: 419239469}
   - 23: {fileID: 419239468}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AI20_001_75_trans_offset_MeshPart3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3285,7 +3287,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 437990590}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spot_top_roof_central6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3312,7 +3314,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 453255965}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spot_top_roof_central3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3339,7 +3341,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 460332213}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spot_top_roof_central21
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3526,7 +3528,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 487530034}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AI20_001_06_trans
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3908,7 +3910,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 530908171}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spot_top_roof_central8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4033,7 +4035,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!215 &534350523
 ReflectionProbe:
   m_ObjectHideFlags: 0
@@ -4059,7 +4061,7 @@ ReflectionProbe:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IntensityMultiplier: 1
+  m_IntensityMultiplier: 0.3
   m_BlendDistance: 1
   m_HDR: 1
   m_BoxProjection: 0
@@ -4073,7 +4075,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 534350522}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -49.264, y: 1.822, z: 21.977}
+  m_LocalPosition: {x: -49.264, y: 1.822, z: 21.984}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4389,7 +4391,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 567587978}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spotLight4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4416,7 +4418,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 568816876}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spot_top_roof_central10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4849,7 +4851,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 616647299}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spot_top_roof_central47
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4971,7 +4973,7 @@ GameObject:
   - 4: {fileID: 624384983}
   - 33: {fileID: 624384985}
   - 23: {fileID: 624384984}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AI20_001_84_trans
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5038,7 +5040,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 649997967}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spot_top_roof_central5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5155,7 +5157,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 674209179}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spot_top_roof_central30
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5184,7 +5186,7 @@ GameObject:
   - 4: {fileID: 682087730}
   - 33: {fileID: 682087732}
   - 23: {fileID: 682087731}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AI20_001_74_trans_offset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5246,7 +5248,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 684734841}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spot_top_roof_central16
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5800,7 +5802,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 729953956}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spot_top_roof_central18
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5831,7 +5833,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 748997934}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spot_top_roof_central31
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5953,7 +5955,7 @@ GameObject:
   - 4: {fileID: 772582060}
   - 33: {fileID: 772582062}
   - 23: {fileID: 772582061}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AI20_001_75_trans_offset_MeshPart1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6136,7 +6138,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 794570751}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spot_top_roof_central33
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6238,7 +6240,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 808609741}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AI20_001_37_trans
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6359,7 +6361,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 814488284}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spot_top_roof_central17
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6450,7 +6452,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 821127815}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spot_top_roof_central15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6477,7 +6479,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 829237172}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spotLight14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6506,7 +6508,7 @@ GameObject:
   - 4: {fileID: 830127448}
   - 33: {fileID: 830127450}
   - 23: {fileID: 830127449}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AI20_001_75_trans_offset_MeshPart0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6855,7 +6857,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 905628121}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Exterior_lght8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6946,7 +6948,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 922262425}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spot_top_roof_central44
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6973,7 +6975,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 926681553}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AI20_001_08_trans
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7065,7 +7067,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 935610756}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spotLight15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7092,7 +7094,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 938381469}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spotLight1 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7119,7 +7121,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 942715323}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spot_top_roof_central41
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7148,7 +7150,7 @@ GameObject:
   - 4: {fileID: 946406377}
   - 33: {fileID: 946406379}
   - 23: {fileID: 946406378}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AI20_001_73_trans_offset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7212,7 +7214,7 @@ GameObject:
   - 4: {fileID: 947159592}
   - 33: {fileID: 947159594}
   - 23: {fileID: 947159593}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AI20_001_170_trans
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7274,7 +7276,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 956341989}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Exterior_lght
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7374,7 +7376,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 962484927}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spot_top_roof_central37
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7620,7 +7622,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1014165199}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spot_azul_med1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7651,7 +7653,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1030223149}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spot_top_roof_central26
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7742,7 +7744,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1044611448}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spotLight16
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7911,7 +7913,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1073638382}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spot_top_roof_central42
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7938,7 +7940,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1080615981}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spot_top_roof_central45
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7967,7 +7969,7 @@ GameObject:
   - 4: {fileID: 1085559906}
   - 33: {fileID: 1085559908}
   - 23: {fileID: 1085559907}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AI20_001_36_trans_offset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8172,7 +8174,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1103540501}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AI20_001_75_trans_offset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8203,7 +8205,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1130367758}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spot_luces
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8342,7 +8344,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1139293037}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spotLight15 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8369,7 +8371,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1142714587}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spot_top_roof_central46
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8396,7 +8398,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1150958543}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Exterior_lght5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8497,7 +8499,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1157645629}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spotLight12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8524,7 +8526,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1158627804}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spot_top_roof_central36
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8679,7 +8681,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1184700405}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: F1_CAR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8706,7 +8708,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1213920297}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spot_top_roof_central11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8733,7 +8735,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1215627691}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spot_top_roof_central25
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8760,7 +8762,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1219702039}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spot_top_roof_central39
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9072,7 +9074,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1248250240}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spot_top_roof_central40
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9099,7 +9101,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1249123168}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spotLight9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9128,7 +9130,7 @@ GameObject:
   - 4: {fileID: 1252714186}
   - 33: {fileID: 1252714188}
   - 23: {fileID: 1252714187}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AI20_001_05_trans
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9190,7 +9192,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1258973636}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spot_top_roof_central20
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9507,7 +9509,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1285423345}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spot_top_roof_central9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9598,7 +9600,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1288918392}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AI20_001_74_trans
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9682,6 +9684,72 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1320298767}
   m_Mesh: {fileID: 4300000, guid: 14a55299c4efc7d448fc8a9f5f54494d, type: 3}
+--- !u!1001 &1322871028
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 125091792}
+    m_Modifications:
+    - target: {fileID: 400002, guid: 21543d2b66928224f8a9536ff3811682, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 2.467
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 21543d2b66928224f8a9536ff3811682, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.246
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 21543d2b66928224f8a9536ff3811682, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -2.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 21543d2b66928224f8a9536ff3811682, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0.015610528
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 21543d2b66928224f8a9536ff3811682, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0.7069345
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 21543d2b66928224f8a9536ff3811682, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0.015610531
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 21543d2b66928224f8a9536ff3811682, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.7069344
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 21543d2b66928224f8a9536ff3811682, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11900000, guid: 21543d2b66928224f8a9536ff3811682, type: 2}
+      propertyPath: m_FarClipPlane
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11900000, guid: 21543d2b66928224f8a9536ff3811682, type: 2}
+      propertyPath: m_NearClipPlane
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 11900000, guid: 21543d2b66928224f8a9536ff3811682, type: 2}
+      propertyPath: m_Orthographic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11900000, guid: 21543d2b66928224f8a9536ff3811682, type: 2}
+      propertyPath: m_AspectRatio
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 21543d2b66928224f8a9536ff3811682, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 21543d2b66928224f8a9536ff3811682, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &1322871029 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400002, guid: 21543d2b66928224f8a9536ff3811682, type: 2}
+  m_PrefabInternal: {fileID: 1322871028}
 --- !u!1 &1325216547
 GameObject:
   m_ObjectHideFlags: 0
@@ -9754,7 +9822,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1360744647}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spotLight15 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9964,7 +10032,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1390921473}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spotLight11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9991,7 +10059,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1400951895}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spot_azul_med
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10024,7 +10092,7 @@ GameObject:
   - 4: {fileID: 1430864907}
   - 33: {fileID: 1430864909}
   - 23: {fileID: 1430864908}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AI20_001_07_trans
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10093,7 +10161,7 @@ GameObject:
   - 4: {fileID: 1440514691}
   - 33: {fileID: 1440514693}
   - 23: {fileID: 1440514692}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AI20_001_02_trans
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10155,7 +10223,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1484345886}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spot_top_roof_central2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10292,7 +10360,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1514482238}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spotLight2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10319,7 +10387,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1516691808}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spotLight1 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10346,7 +10414,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1517743188}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spot_top_roof_central13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10779,6 +10847,52 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nombreCosto: asdasdfn
+--- !u!1 &1614968783
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1614968784}
+  - 119: {fileID: 1614968785}
+  m_Layer: 0
+  m_Name: ProjectorLogo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1614968784
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1614968783}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071067}
+  m_LocalPosition: {x: 0.255, y: -0.202, z: -2.128}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 125091792}
+  m_RootOrder: 2
+--- !u!119 &1614968785
+Projector:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1614968783}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_NearClipPlane: 0.01
+  m_FarClipPlane: 0.5
+  m_FieldOfView: 45
+  m_AspectRatio: 1
+  m_Orthographic: 0
+  m_OrthographicSize: 10
+  m_Material: {fileID: 2100000, guid: 1416ee37e3b7d3847888376e56367e14, type: 2}
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &1615058163
 GameObject:
   m_ObjectHideFlags: 0
@@ -10893,7 +11007,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1630115837}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spotLight7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11240,7 +11354,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1664446991}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AI20_001_75_trans
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11356,7 +11470,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1672938044}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spot_top_roof_central28
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11383,7 +11497,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1679557226}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spot_top_roof_central34
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11485,7 +11599,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1715627199}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spot_top_roof_central29
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11512,7 +11626,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1719263844}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Exterior_lght1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11541,7 +11655,7 @@ GameObject:
   - 4: {fileID: 1721560710}
   - 33: {fileID: 1721560712}
   - 23: {fileID: 1721560711}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AI20_001_37_trans_offset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11670,7 +11784,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1777366726}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spot_top_roof_central27
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11697,7 +11811,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1779869215}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Exterior_lght4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11886,7 +12000,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1879356394}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AI20_001_73_trans
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12322,7 +12436,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1911208742}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spotLight1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12413,7 +12527,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1929804722}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spotLight13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12440,7 +12554,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1933841821}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spot_top_roof_central12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12574,7 +12688,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1940452244}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Exterior_lght2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12729,7 +12843,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1955978512}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spot_azul_med2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13081,7 +13195,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2025364987}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spotLight2 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13108,7 +13222,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2028149700}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spotLight5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13135,7 +13249,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2032430768}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spot_top_roof_central23
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13162,7 +13276,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2043071467}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spot_top_roof_central
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13275,7 +13389,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2078812723}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spot_top_roof_central22
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13366,7 +13480,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2130918972}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spotLight16 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
