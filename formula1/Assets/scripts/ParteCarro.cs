@@ -62,8 +62,8 @@ public class ParteCarro : MonoBehaviour {
 			if(rend){
 				rend.material.SetFloat("_Outline", 0);
 			}
-			if(!esParte && !UIController.instance){
-				UIController.instance.infoPanel.UnsetInfoPanelColor( true );
+			if(!esParte && UIController.instance.infoPanel != null){
+				UIController.instance.infoPanel.UnsetInfoPanelColor(true);
 			}
 		}
 			
@@ -114,11 +114,12 @@ public class ParteCarro : MonoBehaviour {
 
 
 	void OnMouseEnter() {
-		if(!ControlCamara.instance.clickBlockeado){
+		if(!ControlCamara.instance.clickBlockeado || UIController.instance.zoom){
 			if(rend){
 				rend.enabled = true;
 				rend.material.SetFloat("_Outline", 2f);
 			}
+
 			UIController.instance.parteCarro = this;
 
 			if(!esParte){
@@ -127,6 +128,7 @@ public class ParteCarro : MonoBehaviour {
 				GameObject panel = Instantiate(Resources.Load(name) as GameObject);
 				UIController.instance.infoPanel = new UIController.InfoPanel(panel, new Vector3(0, 0f, -.8f), blue);
 				UIController.instance.infoPanel.SetPanelColor(blue, informacion, transform.position);
+				UIController.instance.panelUpdatePosition = transform.position;
 			}
 		}
 	}		

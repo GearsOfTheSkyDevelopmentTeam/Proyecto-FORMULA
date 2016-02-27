@@ -25,6 +25,7 @@ public class UIController : MonoBehaviour{
 //	Dictionary<string, Boton> botones;
 
 	public ParteCarro parteCarro = null;
+	public Vector3 panelUpdatePosition;
 
 	private static UIController _instance;
 
@@ -47,17 +48,18 @@ public class UIController : MonoBehaviour{
 	}
 
 	void Update(){
-		if(infoPanel != null ){
-			infoPanel.UpdatePanelColor(parteCarro.transform.position);
+		if(infoPanel != null){
+			infoPanel.UpdatePanelColor(panelUpdatePosition);
 		}
 	}
 
-	public void Zoom(ParteCarro _parteCarro){
+	public void Zoom(ParteCarro _parteCarro){		
 		parteCarro = _parteCarro;
 		parteCarro.SetEtiquetas(true);
 		quitZoom.SetActive(true);
 		zoom = true;
 		ControlCamara.instance.CambiarTarget(parteCarro, true);
+		panelUpdatePosition = parteCarro.transform.position;
 	}
 
 	public void Zoom(){
@@ -84,6 +86,7 @@ public class UIController : MonoBehaviour{
 		parteCarro = _parteCarro;
 		textoColor.text = parteCarro.ObtenerColorActual();
 		ControlCamara.instance.BlockearCLick();
+		panelUpdatePosition = parteCarro.transform.position;
 	}
 		
 	public void DesactivarUIParte(){
@@ -125,9 +128,6 @@ public class UIController : MonoBehaviour{
 		Vector3 infoPanelOffset;
 
 		public InfoPanel(GameObject panel, Vector3 offset, Color target){
-//			if(infoPanel != null){
-//				Destroy(infoPanel);
-//			}
 			panel.transform.SetParent(instance.canvasPanel.transform);
 			infoPanel = panel;
 			imagenesPanel = new List<Image>();
