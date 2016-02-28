@@ -1,9 +1,11 @@
 fileFormatVersion: 2
 guid: b917ef1811f1e444489b280607dbb6f1
-timeCreated: 1455826280
+timeCreated: 1456683900
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: menuelemento1_0
+    21300002: menuelemento1_1
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -17,7 +19,7 @@ TextureImporter:
   bumpmap:
     convertToNormalMap: 0
     externalNormalMap: 0
-    heightScale: .25
+    heightScale: 0.25
     normalMapFilter: 0
   isReadable: 0
   grayScaleToAlpha: 0
@@ -37,18 +39,65 @@ TextureImporter:
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
-  spriteMode: 1
+  allowsAlphaSplitting: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
-  spritePivot: {x: .5, y: .5}
+  spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: menuelemento1_0
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 666
+        width: 1030
+        height: 252
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 296.37878, y: 45.818176}
+        - {x: 260.37878, y: 16.818176}
+        - {x: -343.62122, y: -30.181824}
+        - {x: -343.62122, y: -49.181824}
+        - {x: -342.62122, y: -53.181824}
+        - {x: -73.621216, y: -61.181824}
+        - {x: 356.37878, y: -61.181824}
+        - {x: 366.37878, y: -49.181824}
+        - {x: 366.37878, y: 40.818176}
+        - {x: 351.37878, y: 45.818176}
+    - name: menuelemento1_1
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 86
+        width: 1230
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -450.9697, y: -9.939392}
+        - {x: -450.9697, y: -27.939392}
+        - {x: -449.9697, y: -30.939392}
+        - {x: 51.030304, y: -38.939392}
+        - {x: 480.0303, y: -38.939392}
+        - {x: 480.0303, y: -28.939392}
+        - {x: 469.0303, y: -9.939392}
+      - - {x: 480.0303, y: -34.939392}
+        - {x: 480.0303, y: -36.939392}
+        - {x: 482.0303, y: -38.939392}
+        - {x: 494.0303, y: -38.939392}
+        - {x: 494.0303, y: -32.939392}
+        - {x: 482.0303, y: -32.939392}
+    outline: []
   spritePackingTag: 
   userData: 
   assetBundleName: 

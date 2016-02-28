@@ -8,19 +8,13 @@ public class ControlPresentacion : MonoBehaviour {
 	public Sprite[] imagenes; 
 	public float velo = 2;
 	private float alpha = 1;
-	private int tamaño = 0, contador = 0;
+	private int contador = 0;
 	bool Running = false, up = false;
 	bool cambio = false;
 	// Use this for initialization
 	void Start () {
 		
 		imagen = GetComponent<SpriteRenderer>();
-		foreach(Sprite s in imagenes){
-
-			if(s) tamaño += 1;
-		}
-	
-		tamaño -= 1;
 	}
 
 	void Update(){
@@ -32,7 +26,7 @@ public class ControlPresentacion : MonoBehaviour {
 	}
 
 	public void ClickDere () {
-		if (contador < tamaño && !Running) {
+		if (contador < (imagenes.Length-1) && !Running) {
 			contador += 1;
 			Running = true;
 		}
