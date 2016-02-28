@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class ControlPresentacion : MonoBehaviour {
@@ -72,5 +73,10 @@ public class ControlPresentacion : MonoBehaviour {
 				Running = false;
 			}
 		}
+	}
+
+	public void Salir(){
+
+		SceneManager.LoadScene("MainMenu");
 	}
 }
