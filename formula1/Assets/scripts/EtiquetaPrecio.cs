@@ -65,7 +65,6 @@ public class EtiquetaPrecio : MonoBehaviour{
 	void OnMouseDown(){
 
 
-
 	}
 
 	void InicializarColores(){

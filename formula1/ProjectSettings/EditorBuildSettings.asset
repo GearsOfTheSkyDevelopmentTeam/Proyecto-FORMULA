@@ -7,9 +7,11 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 0
     path: Assets/Scenes/main.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Logo.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MainMenu.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Taller.unity
+  - enabled: 1
+    path: Assets/Scenes/Presentacion.unity
